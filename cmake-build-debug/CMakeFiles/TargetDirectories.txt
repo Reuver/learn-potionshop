@@ -1,0 +1,3 @@
+C:/Users/Reuver/Documents/Development/learn-potionshop/cmake-build-debug/CMakeFiles/learn_potionshop.dir
+C:/Users/Reuver/Documents/Development/learn-potionshop/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/Reuver/Documents/Development/learn-potionshop/cmake-build-debug/CMakeFiles/rebuild_cache.dir
