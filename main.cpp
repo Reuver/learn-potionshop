@@ -127,17 +127,18 @@ void purchase(Player& player){
                 std::cout << "You got a " << Potion::potion_name[selection] << " potion. \n" ;
                 std::cout << "Thanks for the purchase. You now have " << gold << " gold.\n\n";
                 continue;
-            } else if (gold < Potion::potion_price.at(selection - '0')){ // too poor for that item
+            } else if (gold < Potion::potion_price.at(selection)){ // too poor for that item
                 std::cout << "You don't have enough money to buy that. \n\n";
                 continue;
+            } else if (gold <= 15){ // too poor to buy the cheapest item
+                std::cout << "You don't have enough money to buy anything.\n\n";
+                break;
             }
 
-        } if (gold <= 15){ // too poor to buy the cheapest item
+        } else if (gold <= 15){ // too poor to buy the cheapest item
             std::cout << "You don't have enough money to buy anything.\n\n";
             break;
-        }
-        else if (inventorySize == player.getMaxInventorySize()){ // inventory full
-
+        } else if (inventorySize == player.getMaxInventorySize()){ // inventory full
             std::cout << "Your inventory is full. \n\n";
             break;
         } else{ // this should never happen, something is very wrong if it does
